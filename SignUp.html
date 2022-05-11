@@ -10,14 +10,18 @@
 <body>
     <div class="container"></div>
     <b>아이디 입력하라 <b><br>
-    <input type="text" id="id1" onchange="fun1()"><br>
+    <input type="text" id="id1" onchange="id()"><br>
     <b>비번 입력하라 </b><br>
-    <input type="text" id = "pw1"  onchange="fun1()" ><br>
-    <b>비번 중복확인 </b><br> 
-    <input type="text" id = "pw2"  onchange="fun1()" > <i id= "lock2" style="color: gray" class="bi bi-file-lock2"></i>
+    <input type="text" id = "pw1"  onchange="pass()" ><br>
+    <b>비번 중복확인 한다</b><br> 
+    <input type="text" id = "pw2"  onchange="pass()" > <i id= "lock2" style="color: gray" class="bi bi-file-lock2"></i>
     <p id = "pass"></p> <br>
     <b>이름이 뭔가</b><br>
-    <input type="text" id = "name"  onchange="fun1()" >
-    
+    <input type="text" id = "name"  onchange="name()" ><br>
+    <b>남자,여자중에 선택하라 </b><br>
+    <input type="text" id = "gender" onchange="gender()"  ><br>
+    <b>이메일 입력하라</b><br>
+    <input type="text" id = "email" onchange="email()"  ><br>
+
 </body>
 </html>
