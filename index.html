@@ -48,6 +48,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
+<<<<<<< HEAD
           <li><a class="nav-link active" href="#header"> 내집 </a></li>
           <li><a class="nav-link" href="#about">내 신상 입니다.</a></li>
           <li><a class="nav-link" href="#resume">나의 화려했던<br>경력입니다!</a></li>
@@ -55,6 +56,14 @@
           <li><a class="nav-link" href="#contact">마음에 들면 <br> 전화주세용♥</a></li>
           <li><a class="nav-link" href="#signup">회원가입</a></li>
           <li><a Class="nav-link" href="#login">로그인</a></li>
+=======
+          <li><a class="nav-link active" href="#header">클릭해도 <br> 의미없는 내집</a></li>
+          <li><a class="nav-link" href="#about">나의 신상입니다.</a></li>
+          <li><a class="nav-link" href="#resume">나의 화려했던<br>경력이다!</a></li>
+          <li><a class="nav-link" href="#portfolio">이건 내 작품이다 <br> 잘 감상하라.</a></li>
+          <li><a class="nav-link" href="#contact">콜미~ ☎ 콜미~♪</a></li>
+          <li><a class="nav-link" href="#signup">회원가입</a></li>
+>>>>>>> 8b6586ca9239775f05a2f86e126fe0a32b238163
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -705,6 +714,70 @@
      
           
 
+
+  <section id="signup" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>SIGNUP</h2>
+        <p>회원가입</p>
+      </div>
+
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="userId" id="userId" placeholder="아이디" required>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-6 form-group">
+            <input type="password" name="pw" class="form-control" id="password" placeholder="비밀번호" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="password" class="form-control" name="email" id="password_confirm" placeholder="비밀번호 재입력" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="userName" id="userName" placeholder="이름" required>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4 form-group">
+            <input type="text" name="birth1" class="form-control" id="birth1" placeholder="생년월일(년)" required>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="birth2" id="birth2" placeholder="월" required>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="birth3" id="birth3" placeholder="일" required>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-lg-12 d-flex justify-content-center portfolio">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active" style="width:480px;">남자</li>
+              <li data-filter=".filter-app" class="" style="width:480px;">여자</li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="userName" id="userName" placeholder="본인 확인 이메일(선택)">
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4 form-group">
+            <input type="text" name="password" class="form-control" id="password" placeholder="대한민국 +82" required>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0 contact">
+            <input type="email" class="form-control" name="email" id="password_confirm" placeholder="전화번호 입력" required>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0 contact">
+            <div class="php-email-form" style="width:162px;padding:0px!important"><button type="submit">인증번호 받기</button></div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="userId" id="userId" placeholder="인증번호를 입력하세요" disabled>
+          </div>
+          <div class="form-group mt-3">
+        <div class="text-center"><button type="submit">가입하기</button></div></div>
+      </form>
+
+    </div>
+  </section>
 
   <div class="credits">
     <!-- All the links in the footer should remain intact. -->
