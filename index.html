@@ -44,16 +44,17 @@
       <h1><a href="index.html">요한월드에 오신걸 환영합니다</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>여기는 내 첫페이지다. <span>그래서 내 마음대로 한다.</span>그냥 아무나 들어와라!</h2>
+      <h2>나의 첫 홈페이지 이며, <span>여기는 내 세상 입니다.</span> 아무나 들어오셔서 구경하세요 !</h2>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link active" href="#header">클릭해도 <br> 의미없는 내집</a></li>
-          <li><a class="nav-link" href="#about">나의 신상입니다.</a></li>
-          <li><a class="nav-link" href="#resume">나의 화려했던<br>경력이다!</a></li>
-          <li><a class="nav-link" href="#portfolio">이건 내 작품이다 <br> 잘 감상하라.</a></li>
-          <li><a class="nav-link" href="#contact">콜미~ ☎ 콜미~♪</a></li>
-          <li><a class="nav-link" href="SignUp.html">회원가입</a></li>
+          <li><a class="nav-link active" href="#header"> 내집 </a></li>
+          <li><a class="nav-link" href="#about">내 신상 입니다.</a></li>
+          <li><a class="nav-link" href="#resume">나의 화려했던<br>경력입니다!</a></li>
+          <li><a class="nav-link" href="#portfolio">내 작품입니다. <br> 잘 감상하십시요.</a></li>
+          <li><a class="nav-link" href="#contact">마음에 들면 <br> 전화주세용♥</a></li>
+          <li><a class="nav-link" href="#signup">회원가입</a></li>
+          <li><a Class="nav-link" href="#login">로그인</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -606,6 +607,104 @@
 
     </div>
   </section><!-- End Contact Section -->
+  
+  <!-- 회원가입 -->
+  <section id="signup" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>SIGNUP</h2>
+        <p>회원가입</p>
+      </div>
+
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+
+        <div class="container">
+          <input type="text" id ="username"  placeholder="아이디 입력" onblur="usernameCheck()" class="form-control" placeholder="username"> 
+          <p id="check-result"></p>
+         <p id = "checkResult"></p>
+      </div>
+      
+          <input type="text" id = "choi" placeholder="비밀번호" onchange="fun1()"  style="width:480px;"> <i class="bi bi-file-lock2  fs-2" ></i>
+          
+          <input type="text" id = "yohan" placeholder="비밀번호 재입력" onchange="fun1()" style="width:480px;" > <i id= "lock2" style="color: gray" class="bi bi-file-lock2 fs-1"></i>
+          <p id = "pass"></p>
+
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="userName" id="userName" placeholder="이름" required  style="width:480px";>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4 form-group">
+            <input type="text" name="birth1" class="form-control" id="birth1" placeholder="생년월일(년)" required style="width:380px";>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="birth2" id="birth2" placeholder="월" required style="width:380px"; >
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="birth3" id="birth3" placeholder="일" required style="width:350px";>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-lg-12 d-flex justify-content-center portfolio">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active" style="width:380px;">남자</li>
+              <li data-filter="*" class="filter-active" style="width:380px;">여자</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container">
+          <input type="text" id="ch" style="width:480px;"> @
+          <input type="text" id="yo" style="width:480px;">
+          <select id="asd" onchange="fun2()">
+              <option value="">직접입력</option>
+              <option value="naver.com">naver.com</option>
+              <option value="daum.net">daum.net</option>
+              <option value="google.com">google.com</option>
+          </select>
+      </div>
+      
+        <div class="row mt-3">
+          <div class="col-md-4 form-group">
+            <input type="text" name="password" class="form-control" id="password" placeholder="대한민국 +82" required >
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0 contact">
+            <input type="email" class="form-control" name="email" id="password_confirm" placeholder="전화번호 입력" required >
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0 contact">
+            <div class="php-email-form" style="width:162px;padding:0px!important"><button type="submit">인증번호 받기</button></div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="userId" id="userId" placeholder="인증번호를 입력하세요" disabled style="width:480px";  >
+          </div>
+          <div class="form-group mt-3">
+        <div class="text-center"><button type="submit">가입하기</button></div></div>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- 로그인 -->
+   <section id="login" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Login</h2>
+        <p>로그인</p>
+        <div class="col-md-6 form-group">
+          <input type="text" name="id" class="form-control" id="log" placeholder="로그인"><br>
+        </div>
+        <div class="col-md-6 form-group mt-3 mt-md-0">
+          <input type="password" class="form-control" name="email" id="password_confirm" placeholder="비밀번호" required>
+        </div>
+        <div class="col-md-6 form-group mt-4 ">
+          <div class="text-center"><button type="submit">로그인을하기</button></div>
+    </div>
+  </section>
+        
+      
+
+     
+          
+
 
   <div class="credits">
     <!-- All the links in the footer should remain intact. -->
@@ -628,5 +727,48 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+<script>
+   function usernameCheck(){ // 아이디
+        console.log("함수호출됨");
+        const username = document.getElementById("username").value;
+        console.log(`username: ${username}`);
+        console.log(username.length);
+        if(username.length >= 5 && username.length <12){
+            checkResult.style.color = "green";
+            checkResult.innerHTML = "좋아요";  
+        }else if(username.length == 0){
+            checkResult.style.color = "red";
+            checkResult.innerHTML = "필수입력입니다.";
+
+        }else{
+            checkResult.style.color = "red";
+            checkResult.innerHTML = "5~100자 이내로 작성해주세요";  
+        }
+        
+    }
+
+  function fun1(){ //비밀번호
+         const choi = document.getElementById("choi").value;
+         const yohan = document.getElementById("yohan").value;
+         const passwd = document.getElementById("pass");
+         const lock2 = document.getElementById("lock2");
+         if(choi == yohan){
+             passwd.innerHTML = "일치합니다."
+             passwd.style.color = "green";
+             lock2.style.color = "green";
+         } else{
+             passwd.innerHTML = "우리선상 비번가지고 장난치면 손목아지 날라간당께~";
+             passwd.style.color = "red";
+             lock2.style.color = "red";
+ 
+         }
+ 
+     }
+     function fun2(){ //이메일
+        var asd = document.getElementById("asd").value; // value 붙이는 이유 값하나만을 가져오기 위해서 value를 안쓰면 전체 내용을 가져오게 된다. 
+        var yohan = document.getElementById("yo"); // value를 안붙이는 이유 : 위에  <input type="text" id="choi"> 안에 value값을 지정하지 않아서 못가져온다.  
+        yohan.value = asd; //
+    }
+ </script>
 
 </html>

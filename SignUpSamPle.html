@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- 회원가입 -->
+  <section id="signup" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>SIGNUP</h2>
+        <p>회원가입</p>
+      </div>
+
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+
+        <div class="container">
+          <input type="text" id ="username"  placeholder="아이디 입력" onblur="usernameCheck()" class="form-control" placeholder="username" style="width:480px;"> 
+          <p id="check-result"></p>
+         <p id = "checkResult"></p>
+      </div>
+      
+          <input type="text" id = "choi" placeholder="비밀번호" onchange="fun1()"  style="width:480px;"> <i class="bi bi-file-lock2  fs-2" ></i>
+          
+          <input type="text" id = "yohan" placeholder="비밀번호 재입력" onchange="fun1()" style="width:480px;" > <i id= "lock2" style="color: gray" class="bi bi-file-lock2 fs-1"></i>
+          <p id = "pass"></p>
+
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="userName" id="userName" placeholder="이름" required  style="width:480px";>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4 form-group">
+            <input type="text" name="birth1" class="form-control" id="birth1" placeholder="생년월일(년)" required style="width:380px";>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="birth2" id="birth2" placeholder="월" required style="width:380px"; >
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="birth3" id="birth3" placeholder="일" required style="width:380px";>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-lg-12 d-flex justify-content-center portfolio">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active" style="width:380px;">남자</li>
+              <li data-filter="*" class="filter-active" style="width:380px;">여자</li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="userName" id="userName" placeholder="본인 확인 이메일(선택)" style="width:480px";>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4 form-group">
+            <input type="text" name="password" class="form-control" id="password" placeholder="대한민국 +82" required >
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0 contact">
+            <input type="email" class="form-control" name="email" id="password_confirm" placeholder="전화번호 입력" required >
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0 contact">
+            <div class="php-email-form" style="width:162px;padding:0px!important"><button type="submit">인증번호 받기</button></div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="userId" id="userId" placeholder="인증번호를 입력하세요" disabled style="width:480px";  >
+          </div>
+          <div class="form-group mt-3">
+        <div class="text-center"><button type="submit">가입하기</button></div></div>
+      </form>
+
+    </div>
+  </section>
+</body>
+<script>
+  function usernameCheck(){ // 아이디
+        console.log("함수호출됨");
+        const username = document.getElementById("username").value;
+        console.log(`username: ${username}`);
+        console.log(username.length);
+        if(username.length >= 5 && username.length <12){
+            checkResult.style.color = "green";
+            checkResult.innerHTML = "좋아요";  
+        }else if(username.length == 0){
+            checkResult.style.color = "red";
+            checkResult.innerHTML = "필수입력입니다.";
+
+        }else{
+            checkResult.style.color = "red";
+            checkResult.innerHTML = "5~100자 이내로 작성해주세요";  
+        }
+        
+    }
+ function fun1(){ //비번 
+        const choi = document.getElementById("choi").value;
+        const yohan = document.getElementById("yohan").value;
+        const passwd = document.getElementById("pass");
+        const lock2 = document.getElementById("lock2");
+        if(choi == yohan){
+            passwd.innerHTML = "일치하당께~"
+            passwd.style.color = "green";
+            lock2.style.color = "green";
+        } else{
+            passwd.innerHTML = "우리선상 비번가지고 장난치면 손목아지 날라간당께~";
+            passwd.style.color = "red";
+            lock2.style.color = "red";
+
+        }
+
+    }
+  
+</script>
+</html>
