@@ -553,9 +553,9 @@
          <p id = "checkResult"></p>
       </div>
       
-          <input type="password" id = "choi" placeholder="비밀번호" onchange="fun1()"  style="width:480px;"> <i class="bi bi-file-lock2  fs-2" ></i>
+          <input type="password" id = "choi" placeholder="비밀번호" onblur="fun1()"  style="width:480px;"> <i class="bi bi-file-lock2  fs-2" ></i>
           
-          <input type="password" id = "yohan" placeholder="비밀번호 재입력" onchange="fun1()" style="width:480px;" > <i id= "lock2" style="color: gray" class="bi bi-file-lock2 fs-1"></i>
+          <input type="password" id = "yohan" placeholder="비밀번호 재입력" onblur="fun1()" style="width:480px;" > <i id= "lock2" style="color: gray" class="bi bi-file-lock2 fs-1"></i>
           <p id = "pass"></p>
 
         <div class="form-group mt-3">
@@ -680,11 +680,17 @@
          const yohan = document.getElementById("yohan").value;
          const passwd = document.getElementById("pass");
          const lock2 = document.getElementById("lock2");
-         if(choi == yohan){
+        
+         if(choi == yohan && choi!="" && yohan!=""){
              passwd.innerHTML = "좋습니당."
              passwd.style.fontSize = "20px";
              passwd.style.color = "#1FDA11";
              lock2.style.color = "#1FDA11";
+         }else if(choi == "" || yohan == ""){
+            passwd.style.fontSize = "20px";
+            passwd.innerHTML = "필수입력입니다.";  
+            passwd.style.color = "red";
+
          } else{
              passwd.innerHTML = "우리선상 비번가지고 장난치면 손목아지 날라간당께~";
              passwd.style.fontSize = "20px";
@@ -692,13 +698,13 @@
              lock2.style.color = "red";
  
          }
+        
  
      }
      
      function nameCheck(){ //이름
         console.log("함수호출됨");
-        const manName = document.getElementById("myName").value;
-        
+        const manName = document.getElementById("myName").value;    
         console.log(`nameCheck: ${manName}`);
         console.log(manName.length);
         if(manName.length >= 2 && nameCheck.length <12){
